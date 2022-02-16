@@ -241,6 +241,16 @@ main .add-card-btn {
   font-size: 20px;
 }
 /* payment page style end */
+/* alert style start */
+.completeAlert {
+	color: #155724;
+	background-color: #d4edda;
+	border-color: #c3e6cb;
+	font-size: 20px;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+/* alert style end */
 
 /* footer style start */
 footer {

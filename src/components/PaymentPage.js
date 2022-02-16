@@ -2,18 +2,24 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import ProductCardInPayment from "./ProductCardInPayment";
 import { removeDataFromCartAndSubtotal } from "../redux/actions/productActions";
+import CompleteAlert from "./CompleteAlert";
+import { useState } from "react";
 export default function PaymentPage() {
+  // let [showAlert,setShowAlert]
+  let [showAlert, setShowAlert] = useState(false);
   const productData = useSelector((state) => state.allProduct);
   const dispatch = useDispatch();
   const articles = productData.cart.map((item) => {
     return <ProductCardInPayment key={item.id} id={item.id} />;
   });
-  
+
   const payAction = () => {
+    setShowAlert(true);
     dispatch(removeDataFromCartAndSubtotal());
   };
   return (
     <div className="ui container">
+      {showAlert && <CompleteAlert />}
       <div className="payment-main">
         <form className="payment-form">
           <h3>Enter your payment details</h3>
