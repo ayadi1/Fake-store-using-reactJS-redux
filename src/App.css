@@ -16,6 +16,14 @@
   top: 100px !important;
 }
 /* Loader style end */
+/* card style start */
+.grid-container {
+  justify-content: space-between;
+}
+.grid-item {
+  min-width: 186px;
+}
+/* card style end */
 
 /* main style start */
 main {
@@ -243,12 +251,12 @@ main .add-card-btn {
 /* payment page style end */
 /* alert style start */
 .completeAlert {
-	color: #155724;
-	background-color: #d4edda;
-	border-color: #c3e6cb;
-	font-size: 20px;
-	padding: 20px;
-	margin-bottom: 20px;
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  font-size: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 /* alert style end */
 
@@ -259,3 +267,29 @@ footer {
   margin-top: 20px;
 }
 /* footer style end */
+
+/* media screen */
+@media only screen and (max-width: 1211px) {
+  .payment-main {
+    flex-direction: column;
+    border-right: 2px solid lightgrey;
+    border-left: 2px solid lightgrey;
+  }
+  .payment-form {
+    width: 100%;
+    padding-bottom: 0;
+  }
+  .payment-sub-total {
+    border: none;
+    width: 100%;
+  }
+
+  .payment-form__address {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 769px) {
+  .ui.vertical.divider {
+    display: none !important;
+  }
+}

@@ -22,7 +22,7 @@ export default function ProductComponents() {
       {products.length <= 0 ? (
         <Spinner />
       ) : (
-        <div className="ui grid link cards ">{productList}</div>
+        <div className="ui grid link cards grid-container ">{productList}</div>
       )}
     </>
   );

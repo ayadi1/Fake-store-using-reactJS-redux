@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 export default function Card(props) {
   const productLink = "/product/" + props.id;
   return (
-    <Link role="div" to={productLink} className="card three wide column">
+    <Link role="div" to={productLink} className="card three grid-item wide column">
         <div className="image">
           <img src={props.image} alt={props.title} />
         </div>
